@@ -24,6 +24,7 @@ import history from './utils/history';
 import { Router, Route, Switch, Redirect } from 'react-router';
 
 import HooksContainer1 from './hooks/hooks_container1';
+import HooksForm  from './hooks/hooks_form'; 
 
 export const auth = new Auth()
 
@@ -70,6 +71,7 @@ class Routes extends Component {
             <Route path='/redirect' component={UnauthRedirect} />
             <Route path='/renderlist' component={RenderList} />
             <Route path='/hookcontainer' component={HooksContainer1} />
+            <Route path='/hooksform' component={HooksForm} />
 
             <Route path='/callback' render={(props) => { handleAuthentication(props); return <Callback />}} />
             <Route path="/component1" render={(props) => <Component1 {...props} /> } />
